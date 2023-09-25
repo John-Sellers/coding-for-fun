@@ -40,7 +40,7 @@ def lambda_handler(event, context):
         print(
             "FaceId: ",
             match["Face"]["FaceId"],
-            "Confidence %: ",
+            ", " "Confidence %: ",
             match["Face"]["Confidence"],
         )
 
