@@ -82,5 +82,5 @@ def build_response(status_code, body=None):
         },
     }
     if body is not None:
-        response["body"] = json.dump(body)
+        response["body"] = json.dumps(body)
     return response
