@@ -37,7 +37,12 @@ def lambda_handler(event, context):
 
     for match in response["FaceMatches"]:
         # Printing the Face Id and Confidence Level
-        print(match["Face"]["FaceId"], match["Face"]["Confidence"])
+        print(
+            "FaceId: ",
+            match["Face"]["FaceId"],
+            "Confidence %: ",
+            match["Face"]["Confidence"],
+        )
 
         # Extracting the FaceId from Dynamodb and specifying it as the face variable
         face = dynamo_table_name.get_item(
