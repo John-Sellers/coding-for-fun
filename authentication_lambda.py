@@ -25,8 +25,7 @@ def lambda_handler(event, context):
     print(event)
 
     # Obtaining the object key from the triggered event (in this case S3 bucket).
-    # object_key = event['Records'][0]['s3']['object']['key']
-    object_key = event["queryStringParameters"]["objectKey"]
+    object_key = event["Records"][0]["s3"]["object"]["key"]
 
     # Storing the newly captured image in the S3 bucket in this variable
     image = s3.get_object(Bucket=bucket_name, Key=object_key)["Body"].read()
