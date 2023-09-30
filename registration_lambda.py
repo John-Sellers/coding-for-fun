@@ -4,7 +4,7 @@ import json
 # Calling in the S3 bucket client to access specified S3 bucket:
 
 # Storing the S3 client in a varible named s3
-s3 = boto3.client("s3")
+s3 = boto3.client("s3", region_name="us-east-1")
 
 
 # Creaing a DynamoDB client to write info from Rekonition to DyanmoDB:
