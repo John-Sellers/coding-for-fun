@@ -40,19 +40,21 @@ def lambda_handler(event, context):
     )
 
     for match in response["FaceMatches"]:
-        # print(match['Face']['FaceId'], match['Face']['Confidence'], match['Similarity'])
-
         face = dynamo_table_name.get_item(
             Key={"RekognitionFacePrintIndex": match["Face"]["FaceId"]}
         )
 
         if "Item" in face:
+            first_name = face["Item"]["First_Name"]
+            last_name = face["Item"]["Last_Name"]
+            response_data = {"first_name": first_name, "last_name": last_name}
             print(
                 "Person Found: ",
                 face["Item"]["First_Name"],
                 " ",
                 face["Item"]["Last_Name"],
             )
-
+            return {"statusCode": 200, "body": json.dumps(response_data)}
         else:
             print("Person could no be recognized!")
+            return {"statusCode": 404, "body": "Person could not be recognized!"}
