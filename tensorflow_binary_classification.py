@@ -27,7 +27,7 @@ plt.legend()
 # Set the random seed so that we get the same random values
 tf.random.set_seed(0)
 
-# 1. Build Model
+## 1. Build Model
 model = tf.keras.Sequential()
 model.add(tf.keras.layers.Dense(10))
 model.add(tf.keras.layers.Activation("relu"))
@@ -35,7 +35,7 @@ model.add(tf.keras.layers.Dense(10))
 model.add(tf.keras.layers.Activation("sigmoid"))
 model.add(tf.keras.layers.Dense(1))
 
-# 2. Compile Model
+## 2. Compile Model
 learning_rate = 0.001
 optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
 
@@ -44,7 +44,7 @@ model.compile(
     optimizer=optimizer,
     metrics=["accuracy", tf.keras.metrics.Precision()],
 )
-# 3. Fit Model
+## 3. Fit Model
 model.fit(X, y, epochs=20)
 model.summary()
 

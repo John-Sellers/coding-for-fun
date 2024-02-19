@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras.datasets import fashion_mnist
 import matplotlib.pyplot as plt
+import random
 import numpy as np
 import pandas as pd
 
@@ -18,6 +19,7 @@ print(
 X_train[0], y_train[0]
 plt.imshow(X_train[15])
 y_train[15]
+
 # Create list of outputs so we know what is what
 class_names = [
     "T-shirt/top",
@@ -31,11 +33,14 @@ class_names = [
     "Bag",
     "Ankle Boot",
 ]
+
 len(class_names)
+
 index = 2200
+
 plt.imshow(X_train[index], cmap=plt.cm.binary)
 plt.title(class_names[y_train[index]])
-import random
+
 
 plt.figure(figsize=(5, 5))
 for i in range(4):
@@ -44,12 +49,16 @@ for i in range(4):
     plt.imshow(X_train[rand_index], cmap=plt.cm.binary)
     plt.title(class_names[y_train[rand_index]])
     plt.axis(False)
+
+
 flatten_model = tf.keras.Sequential()
 flatten_model.add(tf.keras.layers.InputLayer(input_shape=(28, 28)))
 flatten_model.add(tf.keras.layers.Flatten())
 flatten_model.output_shape
 y_train[:10]
 y_train.shape, X_train.shape
+
+
 # Assuming y_train is not one-hot encoded
 # One-hot encode the labels
 y_train_encoded = tf.keras.utils.to_categorical(y_train, num_classes=10)
@@ -83,6 +92,7 @@ history = model.fit(
 )
 model.summary()
 X_train.min(), X_train.max()
+
 # Normalizing data
 X_train_norm = X_train / 255.0
 X_test_norm = X_test / 255.0
