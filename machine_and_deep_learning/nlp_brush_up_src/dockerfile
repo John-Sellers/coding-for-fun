@@ -1,0 +1,18 @@
+# Use the official Python 3.11.8 base image from Docker Hub
+FROM python:3.11.8
+
+# Set the working directory inside the container to /nlp_brush_up
+WORKDIR /nlp_brush_up
+
+# Copy the requirements.txt file from the host machine to the current directory inside the container
+COPY requirements.txt .
+
+# Install Python dependencies listed in the requirements.txt file using pip
+RUN pip install -r requirements.txt
+
+# Copy the contents of the ./nlp_brush_up_src directory from the host machine to the /code directory inside the container
+COPY ./nlp_brush_up_src ./code
+
+# Specify the default command to run when the container starts
+# This command runs the Python script nlp_brush_up.py located in the /nlp_brush_up_src directory
+CMD [ "python", "./nlp_brush_up_src/nlp_brush_up." ]# Use the official Python 3.11.8 base image from Docker Hub
