@@ -3,8 +3,7 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder, MinMaxScaler
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score, mean_squared_error, accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.linear_model import LogisticRegression
 
 # Step 1: Load data
