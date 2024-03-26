@@ -21,5 +21,7 @@ def product(array: np.array) -> int | float:
 string1: str = "anagram"
 string2: str = "naagarm"
 
+array = np.array([1, 2, 3, 4, 5])
+
 print(anagram(string1=string1, string2=string2))
-print(product(np.array([1, 2, 3, 4])))
+print(product(array=array))
