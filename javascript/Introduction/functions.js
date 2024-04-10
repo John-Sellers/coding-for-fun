@@ -67,6 +67,18 @@ function square(int) {
     return int * int
 }
 
+function randomFraction() {
+
+    return Math.random();
+}
+
+function randomWholeNum() {
+
+    return Math.floor(Math.random() * 100);
+}
+
+console.log(randomFraction(), randomWholeNum());
+
 
 var number = 8
 
