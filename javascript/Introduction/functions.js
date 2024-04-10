@@ -63,6 +63,14 @@ function nextInLine(arr, item) {
 
 var testArr = [1, 2, 3, 4, 5];
 
+function square(int) {
+    return int * int
+}
+
+
+var number = 8
+
 console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr))
+console.log(square(number))
