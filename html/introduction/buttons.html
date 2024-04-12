@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+  </head>
+  <body>
+    <h1>Learning To Create Buttons</h1>
+    <button
+      onclick="doSomething()"
+      style="
+        background-color: blueviolet;
+        border-top: maroon;
+        border-radius: 25px;
+      "
+    >
+      Click Me
+    </button>
+
+    <p id="Hello">Hello</p>
+
+    <script>
+      function doSomething() {
+        document.getElementById("Hello").innerHTML = "Goodbye";
+      }
+    </script>
+  </body>
+</html>
