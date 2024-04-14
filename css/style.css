@@ -20,20 +20,26 @@
     - color
   */
   text-shadow: 3px 3px 5px rgb(0, 0, 255), -3px -3px 5px red;
+  text-align: center;
 }
 #form-main {
   border: 8px solid rgb(211, 22, 4); /*This is shorthand for border size, style, and color*/
   background-color: rgb(0, 0, 0);
   color: white;
-  margin: 0px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: 100px;
-  margin-right: 100px;
+  /* margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px; */
+  margin: auto;
+  text-align: center;
 }
+
 #form-footer {
   background-color: rgb(0, 0, 0);
   color: white;
+  font-family: sans-serif, "Times New Roman", Times, serif;
+  text-align: center;
 }
 h1 {
   font-family: sans-serif, "Times New Roman", Times, serif;
@@ -42,4 +48,21 @@ label {
   font-family: sans-serif;
   font-size: 20px;
   font-weight: bold;
+}
+.buttons:hover {
+  color: red;
+  font-size: 25px;
+}
+
+.buttons:not(:hover) {
+  background-color: red;
+}
+
+.buttons:active {
+  color: rgb(171, 8, 87);
+}
+/* All or specific children elements can be selected by 
+selecting the element and then the children elements after */
+form label {
+  font-size: 15px;
 }
