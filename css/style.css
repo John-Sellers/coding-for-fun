@@ -3,19 +3,33 @@
   src: url(fonts);
 }
 
+/* '#' are used to select specific elements by 'id', while '.' is used to select classes*/
 #form-header {
   background-color: rgb(0, 0, 0);
+  font-size: 28px;
   padding: 2px;
   color: white;
   border: 15px;
   border-color: white;
   border-style: outset;
   border-radius: 10px;
+  /* The parameters for 'text-shadow' and 'box-shadow is as follows:
+    - horizontal offset,
+    - vertical offset,
+    - blur,
+    - color
+  */
+  text-shadow: 3px 3px 5px rgb(0, 0, 255), -3px -3px 5px red;
 }
 #form-main {
-  border: 15px solid rgb(211, 22, 4); /*This is short had for border size, style, and color*/
+  border: 8px solid rgb(211, 22, 4); /*This is shorthand for border size, style, and color*/
   background-color: rgb(0, 0, 0);
   color: white;
+  margin: 0px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 #form-footer {
   background-color: rgb(0, 0, 0);
