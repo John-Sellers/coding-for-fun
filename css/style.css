@@ -1,8 +1,26 @@
-h1 {
-  border-style: double;
-  border-color: blue;
+@font-face {
+  font-family: Test;
+  src: url(fonts);
 }
 
-h2 {
-  border-bottom-style: dotted;
+#form-header {
+  background-color: rgb(0, 0, 0);
+  padding: 2px;
+  color: white;
+}
+#form-main {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+#form-footer {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+h1 {
+  font-family: sans-serif, "Times New Roman", Times, serif;
+}
+label {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
