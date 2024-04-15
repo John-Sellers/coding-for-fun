@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(224, 224, 224);
+}
+
+h1 {
+  color: blue;
+  font-size: 25px;
+}
+
+form {
+  background-color: white;
+  text-align: center;
+  max-width: 350px;
+  max-height: 400px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px;
+}
+
+#numBox {
+  width: 50%;
+  text-align: center;
+  font-size: 25px;
+  border: 3px solid blue;
+  border-radius: 8px;
+  margin: 15px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+input {
+  margin: 15px;
+}
+
+button {
+  width: 25%;
+  margin-top: 15px;
+  background-color: blue;
+  color: white;
+  font-size: large;
+  border: rgb(0, 0, 0);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: red;
+  color: black;
+  font-size: 20px;
+}
+
+#result {
+  font-size: 20px;
+  font-weight: 600;
+}
