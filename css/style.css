@@ -66,3 +66,8 @@ selecting the element and then the children elements after */
 form label {
   font-size: 15px;
 }
+
+label::selection {
+  color: rgb(89, 255, 71);
+  background-color: hsl(0, 0%, 21%);
+}
