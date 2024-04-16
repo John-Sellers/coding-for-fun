@@ -1,9 +1,9 @@
-var myName = "John"
-var age = "25"
+var myName = "John";
+var age = "25";
 
 /* There are different methods/properties that JS provides:
 
-length: deterines the length of a variable
+length: determines the length of a variable
 bracket notation (indexing): allows for the selection of a specified index (i.e. myName[0])
 slice(): allows you to extract a section of an array into a new array.
 splice(): removes elements from an array but also returns the removed elements as a new array
@@ -12,6 +12,8 @@ push(): adds one or more elements to the end of an array
 pop(): removes the last element from an array
 shift(): removes the first element from an array
 unshift(): add a new element to the front of an array
+...parameter: bundles separate elements into an array
+...array: expands an array into separate elements
 
 */
 
