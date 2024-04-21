@@ -1,3 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --yellow: #fffd44;
+  --purple: #4000a0;
+  --green: #00ff0a;
+  --white: #fff;
+  --black: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
 body {
-  background-color: rgb(10, 0, 76);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+}
+
+img {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: normal;
+  color: var(--white);
+  margin: 10px;
+}
+
+i {
+  position: absolute;
+  border: 2px solid var(--white);
+  inset: 0;
+  transition: 0.5s;
+}
+
+.b1 {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: clockwise 6s linear infinite;
+}
+
+.b2 {
+  border-radius: 43% 67% 68% 42% / 46% 49% 61% 64%;
+  animation: clockwise 4s linear infinite;
+}
+
+.b3 {
+  border-radius: 33% 57% 58% 32% / 36% 39% 51% 54%;
+  animation: counterclockwise 10s linear infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+img:hover .b1 {
+  border: 6px solid var(--green);
+  filter: drop-shadow(0 0 20px var(--green));
+}
+img:hover .b2 {
+  border: 6px solid var(--purple);
+  filter: drop-shadow(0 0 20px var(--purple));
+}
+img:hover .b3 {
+  border: 6px solid var(--yellow);
+  filter: drop-shadow(0 0 20px var(--yellow));
 }
