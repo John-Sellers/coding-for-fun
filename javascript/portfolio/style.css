@@ -1,94 +1,113 @@
+/* Importing the Quicksand font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+/* Defining custom CSS variables in the root */
 :root {
-  --yellow: #ccc922;
-  --purple: #4000a0;
-  --green: #00ff0a;
-  --white: #fff;
-  --black: #111;
+  --yellow: #ccc922; /* Custom variable for yellow color */
+  --purple: #4000a0; /* Custom variable for purple color */
+  --green: #00ff0a; /* Custom variable for green color */
+  --white: #fff; /* Custom variable for white color */
+  --black: #111; /* Custom variable for black color */
 }
 
+/* Applying styles to all elements */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-family: "Quicksand", sans-serif; /* Set default font family */
 }
 
+/* Applying styles to the body element */
 body {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--black);
+  width: 100%; /* Full width of the viewport */
+  min-height: 100vh; /* Minimum height of the viewport */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  background-color: var(
+    --black
+  ); /* Set background color using custom variable */
 }
 
+/* Applying styles to all img elements */
 img {
-  width: 250px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  width: 250px; /* Set width to 250 pixels */
+  height: 100%; /* Fill available height */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative; /* Positioning context for absolutely positioned children */
 }
 
+/* Applying styles to all h1 elements */
 h1 {
-  font-size: 25px;
-  font-weight: normal;
-  color: var(--white);
-  margin: 10px;
+  font-size: 25px; /* Set font size to 25 pixels */
+  font-weight: normal; /* Use normal font weight */
+  color: var(--white); /* Set text color using custom variable */
+  margin: 10px; /* Add margin around the element */
 }
 
+/* Applying styles to all i elements (likely used for icons) */
 i {
-  position: absolute;
-  border: 2px solid var(--white);
-  inset: 0;
-  transition: 0.5s;
+  position: absolute; /* Position the element absolutely within its container */
+  border: 2px solid var(--white); /* Set border with custom variable */
+  inset: 0; /* Fill the entire parent element */
+  transition: 0.5s; /* Smooth transition effect */
 }
 
+/* Applying styles to elements with class .b1, .b2, and .b3 */
 .b1 {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  animation: clockwise 6s linear infinite;
+  border-radius: 10%; /* Custom border radius */
+  animation: clockwise 6s linear infinite; /* Apply animation to rotate clockwise */
 }
 
 .b2 {
-  border-radius: 43% 67% 68% 42% / 46% 49% 61% 64%;
-  animation: clockwise 4s linear infinite;
+  border-radius: 43% 67% 68% 42% / 46% 49% 61% 64%; /* Custom border radius */
+  animation: clockwise 4s linear infinite; /* Apply animation to rotate clockwise */
 }
 
 .b3 {
-  border-radius: 33% 57% 58% 32% / 36% 39% 51% 54%;
-  animation: counterclockwise 10s linear infinite;
+  border-radius: 5% 10% 20% 10% / 36% 39% 51% 54%; /* Custom border radius */
+  animation: counterclockwise 10s linear infinite; /* Apply animation to rotate counterclockwise */
 }
 
+/* Keyframes for clockwise rotation animation */
 @keyframes clockwise {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* End rotation at 360 degrees (full circle) */
   }
 }
 
+/* Keyframes for counterclockwise rotation animation */
 @keyframes counterclockwise {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* End rotation at 360 degrees (full circle) */
   }
 }
 
+/* Hover styles for img elements with class .b1, .b2, and .b3 */
 img:hover .b1 {
-  border: 6px solid var(--green);
-  filter: drop-shadow(0 0 20px var(--green));
+  border: 6px solid var(--green); /* Change border color on hover using custom variable */
+  filter: drop-shadow(
+    0 0 20px var(--green)
+  ); /* Apply drop shadow effect on hover */
 }
 img:hover .b2 {
-  border: 6px solid var(--purple);
-  filter: drop-shadow(0 0 20px var(--purple));
+  border: 6px solid var(--purple); /* Change border color on hover using custom variable */
+  filter: drop-shadow(
+    0 0 20px var(--purple)
+  ); /* Apply drop shadow effect on hover */
 }
 img:hover .b3 {
-  border: 6px solid var(--yellow);
-  filter: drop-shadow(0 0 20px var(--yellow));
+  border: 6px solid var(--yellow); /* Change border color on hover using custom variable */
+  filter: drop-shadow(
+    0 0 20px var(--yellow)
+  ); /* Apply drop shadow effect on hover */
 }
