@@ -58,7 +58,7 @@ i {
 
 /* Applying styles to elements with class .b1, .b2, and .b3 */
 .b1 {
-  border-radius: 10%; /* Custom border radius */
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; /* Custom border radius */
   animation: clockwise 6s linear infinite; /* Apply animation to rotate clockwise */
 }
 
