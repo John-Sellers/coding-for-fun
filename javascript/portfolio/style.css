@@ -58,17 +58,23 @@ i {
 
 /* Applying styles to elements with class .b1, .b2, and .b3 */
 .b1 {
+  margin: auto; /*Adjusting the marginal alignment*/
+  width: 500px; /*Modifying height*/
   border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; /* Custom border radius */
   animation: clockwise 6s linear infinite; /* Apply animation to rotate clockwise */
 }
 
 .b2 {
+  margin: auto; /*Adjusting the marginal alignment*/
+  width: 600px; /*Modifying height*/
   border-radius: 43% 67% 68% 42% / 46% 49% 61% 64%; /* Custom border radius */
   animation: clockwise 4s linear infinite; /* Apply animation to rotate clockwise */
 }
 
 .b3 {
-  border-radius: 5% 10% 20% 10% / 36% 39% 51% 54%; /* Custom border radius */
+  margin: auto; /*Adjusting the marginal alignment*/
+  width: 700px; /*Modifying height*/
+  border-radius: 32% 57% 58% 32% / 36% 39% 51% 54%; /* Custom border radius */
   animation: counterclockwise 10s linear infinite; /* Apply animation to rotate counterclockwise */
 }
 
@@ -92,21 +98,40 @@ i {
   }
 }
 
-/* Hover styles for img elements with class .b1, .b2, and .b3 */
-img:hover .b1 {
-  border: 6px solid var(--green); /* Change border color on hover using custom variable */
+/* Keyframes for wavy effect */
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Hover styles for .b1, .b2, and .b3 when the parent div is hovered */
+#about:hover .b1 {
+  border-color: var(
+    --green
+  ); /* Change border color on hover using custom variable */
   filter: drop-shadow(
     0 0 20px var(--green)
   ); /* Apply drop shadow effect on hover */
 }
-img:hover .b2 {
-  border: 6px solid var(--purple); /* Change border color on hover using custom variable */
+#about:hover .b2 {
+  border-color: var(
+    --purple
+  ); /* Change border color on hover using custom variable */
   filter: drop-shadow(
     0 0 20px var(--purple)
   ); /* Apply drop shadow effect on hover */
 }
-img:hover .b3 {
-  border: 6px solid var(--yellow); /* Change border color on hover using custom variable */
+#about:hover .b3 {
+  border-color: var(
+    --yellow
+  ); /* Change border color on hover using custom variable */
   filter: drop-shadow(
     0 0 20px var(--yellow)
   ); /* Apply drop shadow effect on hover */
