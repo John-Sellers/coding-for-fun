@@ -1,138 +1,142 @@
 /* Importing the Quicksand font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-/* Defining custom CSS variables in the root */
+/* Define custom CSS variables in the root */
 :root {
   --yellow: #ccc922; /* Custom variable for yellow color */
   --purple: #4000a0; /* Custom variable for purple color */
   --green: #00ff0a; /* Custom variable for green color */
   --white: #fff; /* Custom variable for white color */
   --black: #111; /* Custom variable for black color */
+  --grey: #3e3e3e; /* Custom variable for grey color */
 }
 
-/* Applying styles to all elements */
+/* Global styles */
 * {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-  font-family: "Quicksand", sans-serif; /* Set default font family */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
-/* Applying styles to the body element */
+/* Body styles */
 body {
-  width: 100%; /* Full width of the viewport */
-  min-height: 100vh; /* Minimum height of the viewport */
-  display: flex; /* Use flexbox layout */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  background-color: var(
-    --black
-  ); /* Set background color using custom variable */
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
 }
 
-/* Applying styles to all img elements */
+/* Navigation bar styles */
+#navbar {
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  background-color: var(--grey);
+  border-radius: 5px;
+}
+
+#navbar ul li a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+/* Hover styles for all li tags in the navbar */
+#navbar li:hover {
+  background-color: var(--grey);
+  color: var(--white);
+}
+
+/* About section styles */
+#about {
+  position: relative;
+  padding: 20px;
+}
+
 img {
-  width: 250px; /* Set width to 250 pixels */
-  height: 100%; /* Fill available height */
-  display: flex; /* Use flexbox layout */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  position: relative; /* Positioning context for absolutely positioned children */
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  margin: auto;
 }
 
-/* Applying styles to all h1 elements */
 h1 {
-  font-size: 25px; /* Set font size to 25 pixels */
-  font-weight: normal; /* Use normal font weight */
-  color: var(--white); /* Set text color using custom variable */
-  margin: 10px; /* Add margin around the element */
+  font-size: 25px;
+  font-weight: normal;
+  color: var(--white);
+  margin: 10px;
 }
 
-/* Applying styles to all i elements (likely used for icons) */
 i {
-  position: absolute; /* Position the element absolutely within its container */
-  border: 2px solid var(--white); /* Set border with custom variable */
-  inset: 0; /* Fill the entire parent element */
-  transition: 0.5s; /* Smooth transition effect */
+  position: absolute;
+  border: 2px solid var(--white);
+  inset: 0;
+  transition: 0.5s;
 }
 
-/* Applying styles to elements with class .b1, .b2, and .b3 */
+.b1,
+.b2,
+.b3 {
+  margin: auto;
+  width: 500px;
+  animation-duration: 6s, 4s, 10s;
+  animation-iteration-count: infinite;
+}
+
 .b1 {
-  margin: auto; /*Adjusting the marginal alignment*/
-  width: 500px; /*Modifying height*/
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; /* Custom border radius */
-  animation: clockwise 6s linear infinite; /* Apply animation to rotate clockwise */
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation-name: clockwise;
 }
 
 .b2 {
-  margin: auto; /*Adjusting the marginal alignment*/
-  width: 600px; /*Modifying height*/
-  border-radius: 43% 67% 68% 42% / 46% 49% 61% 64%; /* Custom border radius */
-  animation: clockwise 4s linear infinite; /* Apply animation to rotate clockwise */
+  border-radius: 43% 67% 68% 42% / 46% 49% 61% 64%;
+  animation-name: clockwise;
 }
 
 .b3 {
-  margin: auto; /*Adjusting the marginal alignment*/
-  width: 700px; /*Modifying height*/
-  border-radius: 32% 57% 58% 32% / 36% 39% 51% 54%; /* Custom border radius */
-  animation: counterclockwise 10s linear infinite; /* Apply animation to rotate counterclockwise */
+  border-radius: 32% 57% 58% 32% / 36% 39% 51% 54%;
+  animation-name: counterclockwise;
 }
 
-/* Keyframes for clockwise rotation animation */
 @keyframes clockwise {
   0% {
-    transform: rotate(0deg); /* Start rotation from 0 degrees */
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg); /* End rotation at 360 degrees (full circle) */
+    transform: rotate(360deg);
   }
 }
 
-/* Keyframes for counterclockwise rotation animation */
 @keyframes counterclockwise {
   0% {
-    transform: rotate(0deg); /* Start rotation from 0 degrees */
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg); /* End rotation at 360 degrees (full circle) */
+    transform: rotate(360deg);
   }
 }
 
-/* Keyframes for wavy effect */
-@keyframes wave {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Hover styles for .b1, .b2, and .b3 when the parent div is hovered */
+/* Hover styles for .b1, .b2, .b3 when the parent div is hovered */
 #about:hover .b1 {
-  border-color: var(
-    --green
-  ); /* Change border color on hover using custom variable */
-  filter: drop-shadow(
-    0 0 20px var(--green)
-  ); /* Apply drop shadow effect on hover */
+  border-color: var(--green);
+  filter: drop-shadow(0 0 20px var(--green));
 }
 #about:hover .b2 {
-  border-color: var(
-    --purple
-  ); /* Change border color on hover using custom variable */
-  filter: drop-shadow(
-    0 0 20px var(--purple)
-  ); /* Apply drop shadow effect on hover */
+  border-color: var(--purple);
+  filter: drop-shadow(0 0 20px var(--purple));
 }
 #about:hover .b3 {
-  border-color: var(
-    --yellow
-  ); /* Change border color on hover using custom variable */
-  filter: drop-shadow(
-    0 0 20px var(--yellow)
-  ); /* Apply drop shadow effect on hover */
+  border-color: var(--yellow);
+  filter: drop-shadow(0 0 20px var(--yellow));
 }
