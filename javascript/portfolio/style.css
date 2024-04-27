@@ -9,27 +9,32 @@
   --white: #fff; /* Custom variable for white color */
   --black: #111; /* Custom variable for black color */
   --grey: #3e3e3e; /* Custom variable for grey color */
+  --lgrey: rgb(183, 183, 183) e; /* Custom variable for grey color */
 }
 
-/* Global styles */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
 
-/* Body styles */
 body {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   background-color: var(--black);
 }
 
-/* Navigation bar styles */
+h1 {
+  font-size: 25px;
+  font-weight: normal;
+  color: var(--white);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 #navbar {
   top: 0px;
   left: 0px;
@@ -41,41 +46,28 @@ body {
   border-radius: 5px;
 }
 
-#navbar ul li a {
+#navbar nav ul li a {
   color: var(--white);
   text-decoration: none;
   padding: 15px;
   display: block;
 }
 
-/* Hover styles for all li tags in the navbar */
-#navbar li:hover {
-  background-color: var(--grey);
+#navbar nav ul li a:hover {
+  background-color: var(--black);
   color: var(--white);
 }
 
-/* About section styles */
 #about {
   position: relative;
-  padding: 20px;
+  padding: 100px;
+  margin: auto;
 }
 
 img {
   width: 250px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  display: block;
   border-radius: 5px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 25px;
-  font-weight: normal;
-  color: var(--white);
-  margin: 10px;
 }
 
 i {
@@ -89,24 +81,25 @@ i {
 .b2,
 .b3 {
   margin: auto;
-  width: 500px;
-  animation-duration: 6s, 4s, 10s;
+  width: 450px;
+  height: 500px;
+  animation-duration: 25s, 25s, 25s;
   animation-iteration-count: infinite;
 }
 
 .b1 {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  border-radius: 60% 40% 60% 40% / 50% 40% 60% 50%;
   animation-name: clockwise;
 }
 
 .b2 {
-  border-radius: 43% 67% 68% 42% / 46% 49% 61% 64%;
+  border-radius: 80% 30% 50% 70% / 40% 60% 30% 50%;
   animation-name: clockwise;
 }
 
 .b3 {
-  border-radius: 32% 57% 58% 32% / 36% 39% 51% 54%;
-  animation-name: counterclockwise;
+  border-radius: 50% 70% 80% 30% / 60% 40% 50% 30%;
+  animation-name: clockwise;
 }
 
 @keyframes clockwise {
@@ -127,16 +120,18 @@ i {
   }
 }
 
-/* Hover styles for .b1, .b2, .b3 when the parent div is hovered */
 #about:hover .b1 {
   border-color: var(--green);
   filter: drop-shadow(0 0 20px var(--green));
+  border-width: 5px;
 }
 #about:hover .b2 {
   border-color: var(--purple);
   filter: drop-shadow(0 0 20px var(--purple));
+  border-width: 5px;
 }
 #about:hover .b3 {
   border-color: var(--yellow);
   filter: drop-shadow(0 0 20px var(--yellow));
+  border-width: 5px;
 }
