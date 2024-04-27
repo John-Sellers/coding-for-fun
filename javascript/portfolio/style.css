@@ -81,8 +81,8 @@ i {
 .b2,
 .b3 {
   margin: auto;
-  width: 450px;
-  height: 500px;
+  width: 500px;
+  height: 600px;
   animation-duration: 25s, 25s, 25s;
   animation-iteration-count: infinite;
 }
