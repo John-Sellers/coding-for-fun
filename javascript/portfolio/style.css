@@ -77,13 +77,27 @@ i {
   transition: 0.5s;
 }
 
-.b1,
-.b2,
+.b1 {
+  margin: auto;
+  width: 500px;
+  height: 600px;
+  animation-duration: 21s;
+  animation-iteration-count: infinite;
+}
+
+.b2 {
+  margin: auto;
+  width: 500px;
+  height: 600px;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+}
+
 .b3 {
   margin: auto;
   width: 500px;
   height: 600px;
-  animation-duration: 25s, 25s, 25s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
 }
 
