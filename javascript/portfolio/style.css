@@ -44,6 +44,11 @@ h1 {
   position: fixed;
   background-color: var(--grey);
   border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+#nav-menu {
+  padding-top: 35px;
 }
 
 #navbar nav ul li a {
@@ -51,6 +56,28 @@ h1 {
   text-decoration: none;
   padding: 15px;
   display: block;
+}
+
+/* Style for the hamburger menu icon and close button */
+.menu-toggle {
+  cursor: pointer; /* Show cursor pointer on hover */
+  color: #fff; /* Text color */
+  font-size: 20px; /* Font size */
+  margin-top: 0px; /* Padding */
+  position: absolute; /* Position absolute for placement */
+  top: 10px;
+  left: 10px;
+}
+
+/* Style for the hamburger menu icon and close button */
+.close-btn {
+  cursor: pointer; /* Show cursor pointer on hover */
+  color: #fff; /* Text color */
+  font-size: 40px; /* Font size */
+  margin-top: 0px; /* Padding */
+  position: absolute; /* Position absolute for placement */
+  top: -2px;
+  right: 10px;
 }
 
 #navbar nav ul li a:hover {
@@ -68,6 +95,8 @@ img {
   width: 250px;
   display: block;
   border-radius: 5px;
+  position: relative;
+  z-index: 2;
 }
 
 i {
@@ -83,6 +112,7 @@ i {
   height: 600px;
   animation-duration: 21s;
   animation-iteration-count: infinite;
+  z-index: 1;
 }
 
 .b2 {
@@ -91,6 +121,7 @@ i {
   height: 600px;
   animation-duration: 13s;
   animation-iteration-count: infinite;
+  z-index: 1;
 }
 
 .b3 {
@@ -99,6 +130,7 @@ i {
   height: 600px;
   animation-duration: 8s;
   animation-iteration-count: infinite;
+  z-index: 1;
 }
 
 .b1 {

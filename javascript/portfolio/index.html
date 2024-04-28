@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
     <header id="navbar">
-      <nav>
+      <nav id="nav-menu">
+        <div class="close-btn" id="close-btn">×</div>
         <ul>
           <li><a href="#">About Me</a></li>
           <li><a href="#">Work History</a></li>
@@ -26,8 +28,14 @@
         href="https://www.linkedin.com/in/john-sellers-32a9291a6/"
         target="_blank"
       >
-        <img src="images/headshot.jpg" alt="Image of John Sellers" />
+        <img
+          src="images/headshot.jpg"
+          alt="Image of John Sellers"
+          title="John Sellers' LinkedIn"
+        />
       </a>
     </main>
+
+    <script src="navBar.js"></script>
   </body>
 </html>
