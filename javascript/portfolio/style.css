@@ -31,6 +31,7 @@ h1 {
   font-size: 25px;
   font-weight: normal;
   color: var(--white);
+  text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -60,24 +61,28 @@ h1 {
 
 /* Style for the hamburger menu icon and close button */
 .menu-toggle {
-  cursor: pointer; /* Show cursor pointer on hover */
-  color: #fff; /* Text color */
-  font-size: 20px; /* Font size */
-  margin-top: 0px; /* Padding */
-  position: absolute; /* Position absolute for placement */
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 0px;
+  position: absolute;
   top: 10px;
   left: 10px;
 }
 
 /* Style for the hamburger menu icon and close button */
 .close-btn {
-  cursor: pointer; /* Show cursor pointer on hover */
-  color: #fff; /* Text color */
-  font-size: 40px; /* Font size */
-  margin-top: 0px; /* Padding */
-  position: absolute; /* Position absolute for placement */
+  cursor: pointer;
+  color: #fff;
+  font-size: 40px;
+  margin-top: 0px;
+  position: absolute;
   top: -2px;
   right: 10px;
+}
+
+header {
+  z-index: 3;
 }
 
 #navbar nav ul li a:hover {
@@ -91,8 +96,31 @@ h1 {
   margin: auto;
 }
 
-img {
+#summary {
+  justify-content: center;
+  margin: auto;
+}
+
+#summary p {
+  color: var(--white);
+  font-size: 20px;
+}
+
+#img {
   width: 250px;
+  margin: auto;
+  position: relative;
+  margin-bottom: 150px;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
   display: block;
   border-radius: 5px;
   position: relative;
@@ -101,6 +129,7 @@ img {
 
 i {
   position: absolute;
+  margin: auto;
   border: 2px solid var(--white);
   inset: 0;
   transition: 0.5s;
@@ -110,42 +139,33 @@ i {
   margin: auto;
   width: 500px;
   height: 600px;
-  animation-duration: 21s;
-  animation-iteration-count: infinite;
   z-index: 1;
-}
-
-.b2 {
-  margin: auto;
-  width: 500px;
-  height: 600px;
-  animation-duration: 13s;
-  animation-iteration-count: infinite;
-  z-index: 1;
-}
-
-.b3 {
-  margin: auto;
-  width: 500px;
-  height: 600px;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  z-index: 1;
-}
-
-.b1 {
   border-radius: 60% 40% 60% 40% / 50% 40% 60% 50%;
-  animation-name: clockwise;
+  animation: clockwise 21s infinite;
+  top: 0%;
+  left: -50%;
 }
 
 .b2 {
+  margin: auto;
+  width: 500px;
+  height: 600px;
+  z-index: 1;
   border-radius: 80% 30% 50% 70% / 40% 60% 30% 50%;
-  animation-name: clockwise;
+  animation: counterclockwise 13s infinite;
+  top: 0%;
+  left: -50%;
 }
 
 .b3 {
+  margin: auto;
+  width: 500px;
+  height: 600px;
+  z-index: 1;
   border-radius: 50% 70% 80% 30% / 60% 40% 50% 30%;
-  animation-name: clockwise;
+  animation: clockwise 8s infinite;
+  top: 0%;
+  left: -50%;
 }
 
 @keyframes clockwise {
@@ -162,21 +182,21 @@ i {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
-#about:hover .b1 {
+#img:hover .b1 {
   border-color: var(--green);
   filter: drop-shadow(0 0 20px var(--green));
   border-width: 5px;
 }
-#about:hover .b2 {
+#img:hover .b2 {
   border-color: var(--purple);
   filter: drop-shadow(0 0 20px var(--purple));
   border-width: 5px;
 }
-#about:hover .b3 {
+#img:hover .b3 {
   border-color: var(--yellow);
   filter: drop-shadow(0 0 20px var(--yellow));
   border-width: 5px;
