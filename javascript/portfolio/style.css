@@ -22,9 +22,8 @@ body {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   background-color: var(--black);
+  flex-direction: column;
 }
 
 h1 {
@@ -39,55 +38,54 @@ h1 {
 #navbar {
   top: 0px;
   left: 0px;
-  width: 200px;
-  height: 100%;
+  width: 100%;
+  height: 75px;
   overflow-x: hidden;
   position: fixed;
   background-color: var(--grey);
-  border-radius: 5px;
-  transition: transform 0.3s ease;
 }
 
 #nav-menu {
-  padding-top: 35px;
+  padding-top: 0px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#navbar nav ul {
+  color: var(--white);
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+  margin-right: 15px;
+  list-style-type: none;
+}
+
+#navbar nav ul li {
+  color: var(--white);
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+  margin-right: 15px;
+  list-style-type: none;
 }
 
 #navbar nav ul li a {
   color: var(--white);
   text-decoration: none;
   padding: 15px;
-  display: block;
-}
-
-/* Style for the hamburger menu icon and close button */
-.menu-toggle {
-  cursor: pointer;
-  color: #fff;
-  font-size: 20px;
-  margin-top: 0px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-/* Style for the hamburger menu icon and close button */
-.close-btn {
-  cursor: pointer;
-  color: #fff;
-  font-size: 40px;
-  margin-top: 0px;
-  position: absolute;
-  top: -2px;
-  right: 10px;
-}
-
-header {
-  z-index: 3;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 #navbar nav ul li a:hover {
   background-color: var(--black);
   color: var(--white);
+}
+
+header {
+  z-index: 3;
 }
 
 #about {
@@ -108,15 +106,18 @@ header {
 
 #img {
   width: 250px;
-  margin: auto;
+  margin-top: 135px;
+  margin-left: 40%;
+  /* margin: auto; */
   position: relative;
   margin-bottom: 150px;
 }
 
 main {
-  height: 100%;
-  width: 100%;
-  margin: 0px;
+  position: fixed;
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 75px;
 }
 
 img {
